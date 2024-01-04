@@ -26,13 +26,11 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
+    steps: 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      getrepo:
-        uses: actions/checkout@v3
-        secrets:
-          access-token: ${{ secrets.PROPS }}
-
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PROPS }}
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
