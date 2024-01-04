@@ -27,12 +27,12 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-      - if: ${{ github.event.repository.custom_properties.fruit == 'Apple' }}
+        if: ${{ github.event.repository.custom_properties.fruit == 'Apple' }}
         run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-      - if: ${{ github.event.repository.custom_properties.fruit == 'Banana' }}
+        if: ${{ github.event.repository.custom_properties.fruit == 'Banana' }}
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
